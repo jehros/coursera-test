@@ -1,0 +1,46 @@
+TASK 1 
+
+
+
+      function firstFindppercase(str) {
+        for (let i = 0; i < str.length; i++)
+          if (str[i] === str[i].toUpperCase()) {
+           console.log(str[i]);     
+            
+      }
+ }
+
+let letterResult = firstFindppercase('there is a storm coming to the  East of the pillipines');
+console.log(letterResult);
+
+
+==============================================================================================
+
+
+TASK 2
+
+
+
+
+function noUppercase(str){
+
+for( let i=0; i<str.length;i++){
+
+    if( str[i] == str[i].toLowerCase()){
+        console.log('There are no UpperCase Letters');
+   
+    }else{
+
+        console.log('String has UpperCase');
+
+}
+}
+}
+
+    let string = noUppercase ('no more rainy days here, sun is about to show up');
+    console.log(string);
+    
+    
+    
+    
+        

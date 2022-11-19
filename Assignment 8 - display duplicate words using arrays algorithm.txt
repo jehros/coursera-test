@@ -1,0 +1,81 @@
+//TASK 1    
+
+
+const arr = ['Web developer', 'Refocus', 'Web developer', 'Web developer', 'Refocus', 'Awesome'];
+
+
+const duplicateResult = arr =>    //creating an arrow functions syntax
+
+arr.reduce((accumulate, current) =>    // use the array method reduce
+
+({ ...accumulate,[current]:           concatenate the elements value into string
+
+(accumulate[current], 0) + 1}), {});    //count the repeated duplicate value
+
+console.log(duplicateResult(arr));    //display the all the duplicates 
+
+---------------------------------------------------------
+
+the code like this: TASK 1 --
+
+
+
+const duplicateResult = (arr) =>
+
+arr.reduce((accumulate, current) => ({ ...accumulate,[current]: (accumulate[current], 0) + 1}), {});
+
+console.log(duplicateResult(arr)); 
+
+
+
+
+OUTPUT: { 'Web developer': 1, Refocus: 1, Awesome: 1 }
+
+
+
+===============================================================================================
+
+Task 2  
+
+
+let invocieList = ['Invoice 008', 'Invoice 007', 'Invoice 006', 'Invoice 005'];
+
+function insert_at_bottom(x) {
+  if (invocieList.length == 0) 
+
+invocieList.push(x);
+
+  else {
+
+    let a = invocieList.pop();
+    insert_at_bottom(x);
+    invocieList.push(a);
+    
+  }
+}
+
+function reverseStack() {
+  if (invocieList.length > 0) {
+    let x = invocieList.pop();
+    reverseStack();
+    insert_at_bottom(x);
+  
+     
+ 
+  }
+}
+
+invocieList.push('Invoice 004');
+invocieList.push('Invoice 003');
+invocieList.push('Invoice 002');
+invocieList.push('Invoice 001');
+
+
+console.log(invocieList.join(" "));
+
+reverseStack();
+
+console.log(invocieList.join(" "));
+
+OUTPUT: Invoice 008 Invoice 007 Invoice 006 Invoice 005 Invoice 004 Invoice 003 Invoice 002 Invoice 001
+OUTPUT: Invoice 001 Invoice 002 Invoice 003 Invoice 004 Invoice 005 Invoice 006 Invoice 007 Invoice 008

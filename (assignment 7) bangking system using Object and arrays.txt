@@ -1,0 +1,365 @@
+TASK 1 
+
+
+
+const bankgingStyle = {
+
+    'bankAccountId':Date.now(),
+    'accountNumber': ['123456789'],
+    'balance': ['5000'],
+    'createAt': ['November 1, 2015'],
+   'credentials': [{
+    
+            'userName': 'Sorj',
+            'password': '123456789', 
+            'pin':'1984'}],
+
+   'ifbankInfoSave': function(){
+        console.log('Bank Account ID:' + this.bankAccountId);
+        console.log('Account Number:' + this.accountNumber);
+        console.log('Current balance:' + this.balance);
+        console.log('Date created:' + this.createAt);
+       
+    },
+    'credentialInformation': function(){
+        for(let i of this.credentials){
+
+            console.log('The UserName:' + i.userName);
+           console.log('The Password:' + i.password); 
+           console.log('And the Pin is:' + i.pin);
+   
+        }
+        
+    }
+}
+
+bankgingStyle.ifbankInfoSave()
+bankgingStyle.credentialInformation()
+
+   
+
+=============================================================
+
+
+
+TASK 2   
+
+
+
+
+
+
+const bankgingStyle = {
+
+    'bankAccountId':Date.now(),
+    'accountNumber': ['123456789'],
+    'balance': ['5000'],
+    'createAt': ['November 1, 2015'],
+   'credentials': [{
+    
+            'userName': 'Sorj',
+            'password': '123456789', 
+            'pin':'1984',
+                  
+            'dbitCard': '1334-4453-6765',
+            'firstName': 'Jehros',
+            'lastName': 'Rina',
+            'birthDate': '09-04-1990'}],
+       
+            'validId':[{
+                'idType': 'Driver License',
+                'idNumber': '5453020345'}],
+            'address': 'Cebu city',
+
+   'ifbankInfoSave': function(){
+        console.log('Bank Account ID:' + this.bankAccountId);
+        console.log('Account Number:' + this.accountNumber);
+        console.log('Current balance:' + this.balance);
+        console.log('Date created:' + this.createAt);
+       
+    },
+    
+    'credentialInformation': function(){
+       
+        for(let i of this.credentials){
+
+            console.log('The UserName:' + i.userName);
+            console.log('The Password:' + i.password); 
+            console.log('And the Pin is:' + i.pin);
+   
+        }
+        
+    }
+}
+
+bankgingStyle.ifbankInfoSave()
+bankgingStyle.credentialInformation()
+
+  
+
+
+==================================================================
+
+or another example for Task 2
+
+
+
+const bankgingStyle = {
+
+    'bankAccountId':Date.now(),
+    'accountNumber': ['123456789'],
+    'balance': ['5000'],
+    'createAt': ['November 1, 2015'],
+   'credentials': [{
+    
+            'userName': 'Sorj',
+            'password': '123456789', 
+            'pin':'1984',
+                  
+            'dbitCard': '1334-4453-6765',
+            'firstName': 'Jehros',
+            'lastName': 'Rina',
+            'birthDate': '09-04-1990'}],
+       
+    'validId':[{
+            'idType': 'Driver License',
+            'idNumber':'5453020345'}],
+    
+            'address': ['Cebu city'],
+
+   'ifbankInfoSave': function(){
+        console.log('Bank Account ID:' + this.bankAccountId);
+        console.log('Account Number:' + this.accountNumber);
+        console.log('Current balance:' + this.balance);
+        console.log('Date created:' + this.createAt);
+       
+    },
+    
+    'credentialInformation': function(){
+       
+        for(let i of this.credentials){
+
+            console.log('The UserName:' + i.userName);
+            console.log('The Password:' + i.password); 
+            console.log('And the Pin is:' + i.pin);
+        }
+    },
+
+    'isvalidateID': function(){
+        for( let checkID of this.validId){
+            
+            console.log('ID type:' + checkID.idType + 'and the Id Number:' + + checkID.idNumber);
+            console.log(this.address);
+         }   
+        
+    }
+
+}
+
+
+bankgingStyle.ifbankInfoSave()
+bankgingStyle.credentialInformation()
+bankgingStyle.isvalidateID();
+
+   
+=======================================================================
+
+TASK 3
+
+Username: Sorj
+
+Password: 123456789
+
+
+
+
+
+const bankgingStyle = {
+
+    'bankAccountId':Date.now(),
+    'accountNumber': ['123456789'],
+    'balance': ['5000'],
+    'createAt': ['November 1, 2015'],
+    'ischeck': true,
+   'credentials': [{
+    
+            'userName': 'Sorj',
+            'password': '123456789', 
+            'pin':'1984',
+                  
+            'dbitCard': '1334-4453-6765',
+            'firstName': 'Jehros',
+            'lastName': 'Rina',
+            'birthDate': '09-04-1990'}],
+       
+    'validId':[{
+            'idType': 'Driver License',
+            'idNumber':'5453020345'}],
+    
+            'address': ['Cebu city'],
+
+    
+    'credentialInformation': function(){
+       let username  = prompt("Enter a username:");
+       let password =  prompt("enter a password:"); 
+
+        
+        for(let i of this.credentials){
+                
+                    
+            if((username == i.userName) && (password == i.password)){
+                
+            console.log('The UserName:' + i.userName);
+            console.log('The Password:' + i.password); 
+            console.log('And the Pin is:' + i.pin);
+            console.log('Bank Account ID:' + this.bankAccountId);
+            console.log('Account Number:' + this.accountNumber);
+            console.log('Current balance:' + this.balance);
+            console.log('Date created:' + this.createAt);
+            
+                
+        }else{
+                console.log('Invalid Creentials' + ' Please Enter a Valid Username and Password');
+                break;
+            }
+        }
+        
+    },
+
+
+     'isValidatedWithdraw': function(){
+
+         let withdraw =2000;
+      for( checkaccountnumber of this.accountNumber){
+          
+       if (checkaccountnumber = true){
+       
+       let newbal = this.balance - withdraw ;
+           console.log(` You have withdrawn ${withdraw} an the new balance on your account is ${newbal}`);
+
+              }
+         }
+
+},
+
+    'isValidateDeposit': function(){
+
+    let deposit = 2000;
+
+    for(checkaccountnumber of this.accountNumber){
+        if( checkaccountnumber = true){
+          newbal= this.balance + deposit;
+                console.log(`You have deposited an Amount of ${deposit} and the New balance is ${newbal}`);
+        }
+    }
+    }
+}
+
+   
+bankgingStyle.credentialInformation()
+bankgingStyle.isValidatedWithdraw()
+bankgingStyle.isValidateDeposit()
+
+=========================================================
+
+//TASK 3  -- 
+
+username: Sorj
+password: 123456789
+
+
+Code sample below:
+
+----------------------------------------------------------------------
+
+
+const bankgingStyle = {
+
+    'bankAccountId':Date.now(),
+    'accountNumber': ['123456789'],
+    'balance': ['5000'],
+    'createAt': ['November 1, 2015'],
+    'ischeck': true,
+   'credentials': [{
+    
+            'userName': 'Sorj',
+            'password': '123456789', 
+            'pin':'1984',
+                  
+            'dbitCard': '1334-4453-6765',
+            'firstName': 'Jehros',
+            'lastName': 'Rina',
+            'birthDate': '09-04-1990'}],
+       
+    'validId':[{
+            'idType': 'Driver License',
+            'idNumber':'5453020345'}],
+    
+            'address': ['Cebu city'],
+
+    
+    'credentialInformation': function(){
+       let username  = prompt("Enter a username:");
+       let password =  prompt("enter a password:"); 
+
+        
+        for(let i of this.credentials){
+                
+                    
+            if((username == i.userName) && (password == i.password)){
+                
+            console.log('The UserName:' + i.userName);
+            console.log('The Password:' + i.password); 
+            console.log('And the Pin is:' + i.pin);
+            console.log('Bank Account ID:' + this.bankAccountId);
+            console.log('Account Number:' + this.accountNumber);
+            console.log('Current balance:' + this.balance);
+            console.log('Date created:' + this.createAt);
+            
+                
+        }else{
+                console.log('Invalid Creentials' + ' Please Enter a Valid Username and Password');
+                break;
+            }
+        }
+        
+    },
+
+
+     'isValidatedWithdraw': function(){
+
+         let withdraw = prompt("Withdraw Amount:");
+         
+      for( checkaccountnumber of this.accountNumber){
+          
+       if (checkaccountnumber = true){
+       
+       let newbal = this.balance - withdraw ;
+           console.log(` You have withdrawn ${withdraw} an the new balance on your account is ${newbal}`);
+
+              }
+         }
+
+},
+
+    'isValidateDeposit': function(){
+
+    var deposit = parseInt(prompt("enter a deposit:"));
+
+    for(checkaccountnumber of this.accountNumber){
+        for(j = 0; j<= this.checkaccountnumber; j++){
+            
+        if( checkaccountnumber = true){
+        let newbal = j.balance + deposit 
+                console.log('You have deposited an Amount of:' + deposit); 
+                console.log('The current balance now is:' + parseInt(newbal));
+        }
+    }
+    }
+}
+}
+
+   
+bankgingStyle.credentialInformation()
+bankgingStyle.isValidatedWithdraw()
+bankgingStyle.isValidateDeposit()

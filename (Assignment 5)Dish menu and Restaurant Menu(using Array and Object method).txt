@@ -1,0 +1,85 @@
+//TASK 1   //
+
+
+const restaurantMenu = {
+
+    'dishName':['WrapFoodFast'],
+    'dishId':[12345],
+    'dishPrice':[''],
+    'ingredients':[{
+        'dishes_name': 'Fried cheese stick', 'dishPrice': 100, 'ingredient1': '2 eggs', 'ingredient2':'Onion Garlic and salt', 'ingredient3':'all purpose flour', 
+        'ingredient4': 'cornstarch', 'ingredient5': 'Mozarella cheese', 'ingredient6':'vergetable_oil',},
+             {'dishes_name': 'kalderetang kambing', 'dishPrice': 200, 'ingredient1':'3lbs goat meat', 'ingredient2':'2 cup butterMilk', 'ingredient3':'tomato saouce', 
+             'ingredient4':'liver spread', 'ingredient5':'Onion carrot garlic', 'ingredient6':'salt and pepper'},
+             {'dishes_name': 'Kare kare', 'dishPrice': 300, 'ingredient1':'1 bundle pechay or bok choy', 'ingredient2':'1_bundle string beans', 'ingredient3':'4pieces eggplants slicede', 
+             'ingredient4':'1cup ground peanuts', 'ingredient5':'1/2 cup shrimp paste', 'ingredient6':'Onion and_Garlic salt and pepper'}],
+
+    'dishMenu': function(){
+
+        for( i of this.ingredients){
+            console.log('Dish Name is:' + i.dishes_name +',' + '' + ' and the price is:' + i.dishPrice + '.' + 'These are the ingredients:',(i.ingredient1 + '/' + i.ingredient2 + '/' + i.ingredient3 + '/' +  i.ingredient4 + '/' + i.ingredient5 +  '/' +i.ingredient6 + '.'));
+             }
+                  
+    }
+}
+
+restaurantMenu.dishMenu();
+
+
+OUTPUT: 
+
+Dish Name is:Fried cheese stick, and the price is:100.These are the ingredients: 2 eggs/Onion Garlic and salt/all purpose flour/cornstarch/Mozarella cheese/vergetable_oil.
+
+Dish Name is:kalderetang kambing, and the price is:200.These are the ingredients: 3lbs goat meat/2 cup butterMilk/tomato saouce/liver spread/Onion carrot garlic/salt and pepper.
+
+Dish Name is:Kare kare, and the price is:300.These are the ingredients: 1 bundle pechay or bok choy/1_bundle string beans/4pieces eggplants slicede/1cup ground peanuts/1/2 cup shrimp paste/Onion and_Garlic salt and pepper.
+
+
+=======================================================================================================================================
+
+
+//TASK 2  //
+
+
+
+const restaurantMenu = {
+
+    'dishName':['WrapFoodFast'],
+    'dishes':[{
+        'dishes_name': 'Fried Cheese Stick', 'dishPrice': 500, 'ingredient1': '2 eggs', 'ingredient2':'Onion Garlic and salt', 'ingredient3':'all purpose flour', 
+        'ingredient4': 'cornstarch', 'ingredient5': 'Mozarella cheese', 'ingredient6':'vergetable_oil.'},
+             {'dishes_name': 'Kalderetang Kambing', 'dishPrice': 500, 'ingredient1':'3lbs goat meat', 'ingredient2':'2 cup butterMilk', 'ingredient3':'tomato saouce', 
+             'ingredient4':'liver spread', 'ingredient5':'Onion carrot garlic', 'ingredient6':'salt and pepper.'},
+             {'dishes_name': 'Kare Kare', 'dishPrice': 500, 'ingredient1':'1 bundle pechay or bok choy', 'ingredient2':'1_bundle string beans', 'ingredient3':'4pieces eggplants slicede', 
+             'ingredient4':'1cup ground peanuts', 'ingredient5':'1/2 cup shrimp paste', 'ingredient6':'Onion and_Garlic salt and pepper.'}],
+    
+    'displayRestaurantName': function(){
+        console.log('Name of Restaurant:' + this.dishName);
+    },
+
+    'dishMenu': function(){
+
+        for( i of this.dishes){
+            console.log(i.dishes_name + ':' + i.dishPrice);
+            console.log('Ingredients:' + i.ingredient1 + ',' + i.ingredient2 + ',' + i.ingredient3 + ',' + i.ingredient4 +  i.ingredient5 + ',' + i.ingredient6 );
+        }
+                 
+    }
+}
+
+     restaurantMenu.displayRestaurantName()
+     restaurantMenu.dishMenu()
+
+
+OUTPUT: 
+
+Name of Restaurant:WrapFoodFast
+
+Fried Cheese Stick:500
+Ingredients:2 eggs,Onion Garlic and salt,all purpose flour,cornstarchMozarella cheese,vergetable_oil.
+
+Kalderetang Kambing:500
+Ingredients:3lbs goat meat,2 cup butterMilk,tomato saouce,liver spreadOnion carrot garlic,salt and pepper.
+
+Kare Kare:500
+Ingredients:1 bundle pechay or bok choy,1_bundle string beans,4pieces eggplants slicede,1cup ground peanuts1/2 cup shrimp paste,Onion and_Garlic salt and pepper.

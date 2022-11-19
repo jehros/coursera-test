@@ -1,0 +1,38 @@
+HOME ASSIGNMENT. Write Your First Code.
+
+Task 1. Hello, world!
+
+Write your first string of code as every web developer does. Open Google Chrome
+DevTools or Visual Studio Code, and display a greeting on the screen, which says
+“Hello, World!”
+
+Answer:
+
+let h1 ='Hello, World';
+console.log(h1);
+
+==========================================================
+
+Task 2. Capture your goal
+Write another string of code. Now, display a phrase on the screen, which says
+
+“I am gonna be an awesome web developer
+
+
+Answer: 
+
+let str2 ="I'm gonna be an awesome web developer";
+console.log(str2); 
+
+===========================================================
+
+Task 3. Write anything you like
+Write another string of code. Now, display any nice and polite phrase on the screen.
+For example, you can write a positive expectation that you have about becoming 
+a web developer.
+
+Answer:
+
+let str1 ='MY expectation why I wanted to become a Web developer, it is In-Demand and Developers earns a great living.';
+
+console.log(str1);

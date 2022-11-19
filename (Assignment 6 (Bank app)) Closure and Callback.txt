@@ -1,0 +1,138 @@
+TASK 1  -- Bank App -- using closure
+
+
+
+
+
+function createBankAccount(name) {
+
+    let balance = 0;
+
+    console.log('Bank account has been created');
+
+
+
+    function depositAmount(amount) {
+
+        balance = balance + amount;
+
+      console.log(`You have deposited an amount of ${amount} and your curreent balance is ${balance}`);
+
+    }
+
+
+
+    function withdrawAmount(amount) {
+
+        balance = balance - amount;
+
+        if (balance > amount) {
+
+         console.log('Exceeded');
+
+        } else {
+
+            console.log(`You have withdrawn an amount of ${amount} and the remaining balance is ${balance}`);
+
+            balance = balance + amount;
+
+        }
+
+    }
+
+
+
+   function checkBalance() {
+
+
+   }
+
+    
+
+    return {
+
+        depositAmount,
+
+        withdrawAmount,
+
+        checkBalance
+
+     }
+
+} 
+
+
+
+    const bankAccount = createBankAccount("Juan");
+
+    
+
+    bankAccount.depositAmount(1808);
+
+    bankAccount.checkBalance();
+
+    bankAccount.withdrawAmount(1000);
+
+    bankAccount.checkBalance();
+
+
+
+======================================================================================================
+
+
+TASK 2  - Callback
+
+
+
+let inputName = "Juan";
+
+let balance = 0;
+
+
+
+
+
+function bankAccount(amount, callback) {
+    callback(amount);
+
+  }
+
+
+function deposit(amount) {
+
+   balance += amount;
+
+   console.log(`${inputName} You have deposited an amount of ${amount}`);
+    console.log(`Account has been created and your balance is ${balance}`);
+
+}
+
+
+
+function withdraw(amount) {
+
+  balance -= amount;
+
+  if (balance > amount) {
+
+  console.log('Exceeded');
+
+    } else {
+
+   console.log(`You have withdrawn an amount of ${amount} and your current balance is ${balance}`);
+
+    balance = balance + amount;
+
+    }  
+
+}
+
+
+function checkBalance() {
+
+    console.log(`current balance is ${balance}`);
+
+}
+
+const newAccount = bankAccount(2000, deposit, withdraw);
+
